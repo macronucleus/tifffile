@@ -16204,7 +16204,7 @@ class OmeXml:
         if 'DimensionOrder' in metadata:
             omedimorder = metadata['DimensionOrder']
             omedimorder = ''.join(
-                ax for ax in omedimorder if dimsizes[dimorder.index(ax)] > 1
+                ax for ax in omedimorder if dimsizes[dimorder.index(ax)] >= 1
             )
             if hiaxes not in omedimorder:
                 raise OmeXmlError(
